@@ -6,9 +6,11 @@ then
   # grab zsh-autosuggestions
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-  # Copy powerlevel10k theme to the appropriate place
+  # Clone the powerlevel10k theme to the appropriate place
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+
+  # Copy powerlevel10k config to the appropriate place
   ln -sf ~/dotfiles/p10k.zsh ~/.p10k.zsh
-  ln -sf ~/dotfiles/powerlevel10k.zsh-theme ~/powerlevel10k/powerlevel10k.zsh-theme
 
   # link the zshrc file
   ln -sf ~/dotfiles/zshrc ~/.zshrc
@@ -23,4 +25,8 @@ then
     . /cartridges/shopify-reportify-config/setup.sh
     restart
   fi
+
+  # try to get the most recent version
+  git fetch origin master
+  git pull
 fi
