@@ -1,9 +1,17 @@
 if [[ "$SPIN" = 1 ]]
 then
-  # Only run nested steps in Spin + shopify/shopify workspaces.
+  # install oh-my-zsh via curl
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+  # link the zshrc file
+  ln -sf ~/dotfiles/zshrc ~/.zshrc
+
+  # specifically load for shopify
   if [[ "$SPIN_REPO_SOURCE_PATH" = "/src/github.com/shopify/shopify" ]]
   then
     cd "$SPIN_REPO_SOURCE_PATH"
+
+    # set reportify config
     cartridge insert thetrevorharmon/shopify-reportify-config
     . /cartridges/shopify-reportify-config/setup.sh
     restart
