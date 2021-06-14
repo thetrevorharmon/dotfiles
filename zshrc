@@ -110,6 +110,9 @@ alias focus="dev run dev --focus"
 # force push
 alias gpf="git push --force-with-lease"
 
+# test without graphql
+alias ytng="yarn test --no-graphql"
+
 # fetch & checkout
 function fetchout() { git fetch origin "$1" && git checkout "$1"; }
 
