@@ -25,8 +25,4 @@ then
     . /cartridges/setup-shopify-config/setup.sh
     restart
   fi
-
-  # try to get the most recent version
-  git fetch origin master
-  git pull
 fi
