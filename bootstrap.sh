@@ -43,3 +43,7 @@ then
     restart
   fi
 fi
+
+echo "⌨️  Set up Git defaults"
+git config --global alias.amend 'commit --amend --no-edit'
+git config --global core.editor 'code --wait'
