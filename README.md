@@ -10,3 +10,7 @@
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Input Mono](https://input.djr.com/)
 - [Smyck color theme](http://color.smyck.org/)
+
+## OS Customizations
+
+- [QLMarkdown](https://github.com/sbarex/QLMarkdown) for markdown quicklook previewing
