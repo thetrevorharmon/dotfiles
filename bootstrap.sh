@@ -31,19 +31,15 @@ then
 
   # link the zshrc file
   ln -sf ~/dotfiles/zshrc ~/.zshrc
-
-  # specifically load for shopify
-  if [[ "$SPIN_REPO_SOURCE_PATH" = "/src/github.com/shopify/shopify" ]]
-  then
-    cd "$SPIN_REPO_SOURCE_PATH"
-
-    # set reportify config
-    cartridge insert thetrevorharmon/setup-shopify-config
-    . /cartridges/setup-shopify-config/setup.sh
-    restart
-  fi
 fi
 
 echo "⌨️  Set up Git defaults"
+
+# Git aliases
 git config --global alias.amend 'commit --amend --no-edit'
+git config --global alias.continue 'rebase --continue'
+git config --global alias.tree "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+
+# Git settings
 git config --global core.editor 'code --wait'
+git config --global pull.rebase true
