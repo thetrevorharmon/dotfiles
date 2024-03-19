@@ -1,20 +1,37 @@
 # install brew
-echo "📥  Downloading & installing Homebrew"
+echo "📥 Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  
 
-echo "📥  Downloading & installing Rocket (emoji picker)"
+# install rocket
+echo "📥 Rocket (emoji picker)"
 brew install --cask rocket
 
+# install vanilla
+echo "📥 Vanilla (tidy up the menu bar)"
+brew install --cask vanilla
+
+# install KeepingYouAwake
+echo "📥 KeepingYouAwake"
+brew install --cask keepingyouawake
+
+# install Alfred
+echo "📥 Alfred"
+brew install --cask alfred
+
+# install MeetingBar
+echo "📥 MeetingBar"
+brew install --cask meetingbar
+
 # install oh-my-zsh via curl
-echo "📥  Downloading & installing Oh-my-zsh"
+echo "📥  Oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # grab zsh-autosuggestions
-echo "📥  Downloading & installing zsh-autosuggestions"
+echo "📥  zsh-autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Clone the powerlevel10k theme to the appropriate place
-echo "📥  Downloading & installing powerlevel10k"
+echo "📥  powerlevel10k (zsh theme)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 if [[ $OSTYPE == 'darwin'* ]]; then
@@ -50,3 +67,12 @@ git config --global alias.tree "log --graph --pretty=format:'%Cred%h%Creset -%C(
 # Git settings
 git config --global core.editor 'code --wait'
 git config --global pull.rebase true
+
+# Get JetBrains Mono font
+echo "📥 Download JetBrains Mono"
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono
+
+# Quick look markdown
+echo "📥 QLMarkdown"
+brew install --cask qlmarkdown
