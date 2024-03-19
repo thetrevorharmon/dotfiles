@@ -1,3 +1,10 @@
+# install brew
+echo "📥  Downloading & installing Homebrew"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  
+
+echo "📥  Downloading & installing Rocket (emoji picker)"
+brew install --cask rocket
+
 # install oh-my-zsh via curl
 echo "📥  Downloading & installing Oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
