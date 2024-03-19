@@ -1,5 +1,11 @@
 # dotfiles
 
+## Programs to install
+
+- [VS Code](https://code.visualstudio.com/)
+- [Spotify](https://www.spotify.com/us/download/mac/)
+- 
+
 ## Terminal
 
 ![an example of what my terminal looks like](terminal-preview.png)
