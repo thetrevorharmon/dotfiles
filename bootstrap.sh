@@ -22,6 +22,10 @@ brew install --cask alfred
 echo "📥 MeetingBar"
 brew install --cask meetingbar
 
+# install VS Code
+echo "📥 VS Code"
+brew install --cask visual-studio-code
+
 # install oh-my-zsh via curl
 echo "📥  Oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
