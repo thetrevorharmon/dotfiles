@@ -5,8 +5,6 @@
 - [VS Code](https://code.visualstudio.com/)
 - [Spotify](https://www.spotify.com/us/download/mac/)
 - Theme toggle shortcuts: [Dark mode](https://www.icloud.com/shortcuts/c01f531f12a64a69aef1659d4d8de6b2), [Light mode](https://www.icloud.com/shortcuts/a624bdcc6e4e40afa26bad5ba469546a), [Toggle](https://www.icloud.com/shortcuts/7ba1e9e5d2ab4d748dd0943d164b2aa7)
--
-
 
 
 ## Terminal
