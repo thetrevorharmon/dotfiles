@@ -1,31 +1,3 @@
-# install brew
-echo "📥 Homebrew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  
-
-# install rocket
-echo "📥 Rocket (emoji picker)"
-brew install --cask rocket
-
-# install vanilla
-echo "📥 Vanilla (tidy up the menu bar)"
-brew install --cask vanilla
-
-# install KeepingYouAwake
-echo "📥 KeepingYouAwake"
-brew install --cask keepingyouawake
-
-# install Alfred
-echo "📥 Alfred"
-brew install --cask alfred
-
-# install MeetingBar
-echo "📥 MeetingBar"
-brew install --cask meetingbar
-
-# install VS Code
-echo "📥 VS Code"
-brew install --cask visual-studio-code
-
 # install oh-my-zsh via curl
 echo "📥  Oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -72,11 +44,41 @@ git config --global alias.tree "log --graph --pretty=format:'%Cred%h%Creset -%C(
 git config --global core.editor 'code --wait'
 git config --global pull.rebase true
 
-# Get JetBrains Mono font
-echo "📥 Download JetBrains Mono"
-brew tap homebrew/cask-fonts
-brew install --cask font-jetbrains-mono
+if [[ $OSTYPE == 'darwin'* ]]; then
+  # install brew
+  echo "📥 Homebrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  
 
-# Quick look markdown
-echo "📥 QLMarkdown"
-brew install --cask qlmarkdown
+  # install rocket
+  echo "📥 Rocket (emoji picker)"
+  brew install --cask rocket
+
+  # install vanilla
+  echo "📥 Vanilla (tidy up the menu bar)"
+  brew install --cask vanilla
+
+  # install KeepingYouAwake
+  echo "📥 KeepingYouAwake"
+  brew install --cask keepingyouawake
+  
+  # install Alfred
+  echo "📥 Alfred"
+  brew install --cask alfred
+  
+  # install MeetingBar
+  echo "📥 MeetingBar"
+  brew install --cask meetingbar
+  
+  # install VS Code
+  echo "📥 VS Code"
+  brew install --cask visual-studio-code
+  
+  # Get JetBrains Mono font
+  echo "📥 Download JetBrains Mono"
+  brew tap homebrew/cask-fonts
+  brew install --cask font-jetbrains-mono
+  
+  # Quick look markdown
+  echo "📥 QLMarkdown"
+  brew install --cask qlmarkdown
+fi
