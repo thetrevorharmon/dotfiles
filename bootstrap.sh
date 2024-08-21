@@ -39,6 +39,7 @@ echo "⌨️  Set up Git defaults"
 git config --global alias.amend 'commit --amend --no-edit'
 git config --global alias.continue 'rebase --continue'
 git config --global alias.tree "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+git config --global alias.refresh "!f() { git checkout main && git pull origin main && git checkout - && git rebase main; }; f"
 
 # Git settings
 git config --global core.editor 'code --wait'
